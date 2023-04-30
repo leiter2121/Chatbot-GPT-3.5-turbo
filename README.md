@@ -1,32 +1,66 @@
-# Chatbot with DALL·E Image Generation
-
-This repository contains a Python script for a chatbot that can generate responses using the OpenAI GPT-3.5 model and generate images using OpenAI's DALL·E. The chatbot also uses Amazon Polly to convert the bot's response to speech.
+Kendra is an AI chatbot that can generate a text response and even an image using OpenAI's GPT-3 and DALL·E models. The chatbot also uses Amazon Polly to convert the text response to speech.
 
 ## Dependencies
 
-- openai (version 3.0.0 or later)
-- boto3
-- pygame
-- requests
+Kendra requires the following dependencies to be installed:
 
-You will also need to have an OpenAI API key and Amazon Polly credentials in order to use this script.
+- `openai`: Python library for accessing the OpenAI API
+- `boto3`: Python library for accessing the Amazon Web Services (AWS) API
+- `pygame`: Python library for audio playback
+- `requests`: Python library for making HTTP requests
+- `pickle`: Python library for object serialization
+
+You can install these dependencies using `pip`:
+
+```bash
+pip install openai boto3 pygame requests pickle
+```
 
 ## Setup
 
-1. Install the required dependencies by running `pip install -r requirements.txt`.
-2. Set your OpenAI API key and Amazon Polly credentials in the script. Replace the placeholder values for `openai.api_key`, `region_name`, `aws_access_key_id`, and `aws_secret_access_key` with your own values.
-3. Run the script using `python chatbot.py`.
+To use Kendra, you need to set up your OpenAI API key and your Amazon Polly credentials. You can do this by editing the following lines in the `kendra.py` file:
+
+```python
+openai.api_key = "YOUR OPENAI API KEY"
+
+polly = boto3.client(
+    "polly",
+    region_name="YOUR AWS REGION",
+    aws_access_key_id="YOUR AWS ID KEY",
+    aws_secret_access_key="YOUR AWS SECRET KEY HERE"
+)
+```
+
+Replace `YOUR OPENAI API KEY` with your OpenAI API key, and replace `YOUR AWS REGION`, `YOUR AWS ID KEY`, and `YOUR AWS SECRET KEY HERE` with your AWS credentials.
 
 ## Usage
 
-The chatbot will prompt the user to enter a message. The chatbot will respond to the user's message with a text response generated using the OpenAI GPT-3.5 model.
+To use Kendra, simply run the `kendra.py` file using Python:
 
-If the user's message contains the word "image", the chatbot will ask the user to describe the image they want to see. The chatbot will then generate an image based on the user's description using OpenAI's DALL·E. The generated image will be saved to the user's desktop.
+```bash
+python kendra.py
+```
 
-To quit the chatbot, the user can enter the message "quit". The chatbot will save the conversation history to a pickle file before quitting.
+The chatbot will prompt you to enter a message. Type your message and press Enter to send it to Kendra. Kendra will then generate a text response or an image, depending on your input.
 
-## Additional Notes
+You can exit Kendra by typing "quit" into the chat. Kendra will save the conversation history to a pickle file before exiting.
 
-- The `generate_chat_response` function limits the conversation history to the last 15 messages and the total token count of the conversation to 4096 tokens. You can adjust these values by changing the `conversation` and `max_tokens` parameters, respectively.
-- The `generate_dalle_image` function generates an image with a default size of 1024x1024 pixels. You can adjust the size by changing the `size` parameter.
-- The `speak_text` function converts text to speech using Amazon Polly and plays the speech using pygame. If you do not want to play the speech, you can comment out the `mixer.init()` and `mixer.music.play()` lines in the function.
+## How it Works
+
+Kendra works by using the OpenAI GPT-3 model to generate a text response to a user's message. The chatbot keeps a history of the conversation, and uses this history as context for the GPT-3 model.
+
+If the user's message contains the word "image", Kendra will ask the user to describe the image they want to see. Kendra will then use the user's description as the prompt to generate an image with the DALL·E model. The generated image will be saved to the user's desktop.
+
+If the user's message does not contain the word "image", Kendra will generate a text response using the GPT-3 model.
+
+Kendra also uses Amazon Polly to convert the text response to speech, which is played back to the user using the Pygame library.
+
+Kendra stores the conversation history in a pickle file, which is loaded and saved each time the chatbot is run. This allows Kendra to remember the conversation history across multiple sessions.
+
+## Limitations
+
+Kendra has some limitations:
+
+- Kendra can only generate images with the DALL·E model if the user provides a good description of the image they want to see. If the description is too vague or ambiguous, the generated image may not be what the user had in mind.
+- Kendra may generate inappropriate or offensive responses, as the GPT-3 model has been trained on a large corpus of text that includes some offensive content.
+- Kendra may have difficulty understanding complex or technical language, as the GPT-3 model is a language model that has been trained on a large corpus of general text, and may not have specialized knowledge in certain domains.
