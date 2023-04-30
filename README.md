@@ -30,15 +30,26 @@ polly = boto3.client(
     aws_secret_access_key="YOUR AWS SECRET KEY HERE"
 )
 ```
-
 Replace `YOUR OPENAI API KEY` with your OpenAI API key, and replace `YOUR AWS REGION`, `YOUR AWS ID KEY`, and `YOUR AWS SECRET KEY HERE` with your AWS credentials.
+
+# You can change the voice in Amazon Polly by changing the voice model variable from Joey to another model. Check AWS details.
+```python
+def speak_text(text):
+    response = polly.synthesize_speech(
+        Text=text,
+        OutputFormat="mp3",
+        VoiceId="Joey",
+        Engine="neural"
+    )
+```    
+
 
 ## Usage
 
 To use Kendra, simply run the `kendra.py` file using Python:
 
 ```bash
-python kendra.py
+python KendraGenIIIbot.py
 ```
 
 The chatbot will prompt you to enter a message. Type your message and press Enter to send it to Kendra. Kendra will then generate a text response or an image, depending on your input.
