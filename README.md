@@ -18,7 +18,7 @@ pip install openai boto3 pygame requests pickle
 
 ## Setup
 
-To use Kendra, you need to set up your OpenAI API key and your Amazon Polly credentials. You can do this by editing the following lines in the `kendra.py` file:
+To use Kendra, you need to set up your OpenAI API key and your Amazon Polly credentials. You can do this by editing the following lines in the `KendraGenIIIbot.py` file:
 
 ```python
 openai.api_key = "YOUR OPENAI API KEY"
@@ -46,7 +46,7 @@ def speak_text(text):
 
 ## Usage
 
-To use Kendra, simply run the `kendra.py` file using Python:
+To use Kendra, simply run the `KendraGenIIIbot.py` file using Python:
 
 ```bash
 python KendraGenIIIbot.py
