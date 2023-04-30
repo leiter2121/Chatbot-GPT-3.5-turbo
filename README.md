@@ -1,4 +1,4 @@
-Kendra is an AI chatbot that can generate a text response and even an image using OpenAI's GPT-3 and DALL·E models. The chatbot also uses Amazon Polly to convert the text response to speech.
+Kendra is an AI chatbot that can generate a text response and even an image using OpenAI's GPT-3.5 Turbo and DALL·E models. The chatbot also uses Amazon Polly to convert the text response to speech.
 
 ## Dependencies
 You will need to have at least python 3.8 https://www.python.org/downloads/release/python-3816/
