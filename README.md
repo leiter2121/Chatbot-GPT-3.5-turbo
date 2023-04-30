@@ -47,7 +47,7 @@ You can exit Kendra by typing "quit" into the chat. Kendra will save the convers
 
 ## How it Works
 
-Kendra works by using the OpenAI GPT-3 model to generate a text response to a user's message. The chatbot keeps a history of the conversation, and uses this history as context for the GPT-3 model.
+Kendra works by using the OpenAI GPT-3.5 Turbo model to generate a text response to a user's message. The chatbot keeps a history of the conversation, and uses this history as context for the GPT-3 model.
 
 If the user's message contains the word "image", Kendra will ask the user to describe the image they want to see. Kendra will then use the user's description as the prompt to generate an image with the DALL·E model. The generated image will be saved to the user's desktop.
 
