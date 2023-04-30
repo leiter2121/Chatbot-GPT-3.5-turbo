@@ -74,4 +74,3 @@ Kendra has some limitations:
 
 - Kendra can only generate images with the DALL·E model if the user provides a good description of the image they want to see. If the description is too vague or ambiguous, the generated image may not be what the user had in mind.
 - Kendra may generate inappropriate or offensive responses, as the GPT-3 model has been trained on a large corpus of text that includes some offensive content.
-- Kendra may have difficulty understanding complex or technical language, as the GPT-3 model is a language model that has been trained on a large corpus of general text, and may not have specialized knowledge in certain domains.
