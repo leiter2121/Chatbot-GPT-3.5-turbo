@@ -32,7 +32,7 @@ polly = boto3.client(
 ```
 Replace `YOUR OPENAI API KEY` with your OpenAI API key, and replace `YOUR AWS REGION`, `YOUR AWS ID KEY`, and `YOUR AWS SECRET KEY HERE` with your AWS credentials.
 
-# You can change the voice in Amazon Polly by changing the voice model variable from Joey to another model. Check AWS details.
+# You can change the voice in Amazon Polly by changing the voice model variable from "Joey" to another model. Check AWS details.
 ```python
 def speak_text(text):
     response = polly.synthesize_speech(
