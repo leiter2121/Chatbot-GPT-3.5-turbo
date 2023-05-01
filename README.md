@@ -48,10 +48,6 @@ pip install openai boto3 pygame requests
 3. Copy the user's access key ID and secret access key, and replace `YOUR_AWS_ID_API_KEY` and `YOUR_AWS_SECRET_KEY` in the code with these values.
 4. Also, replace `YOUR_REGION_NAME` with the region where you created the user.
 
-## Running the code
-
-After you have updated the API keys and credentials, you can run the code using your preferred method, such as running it in a Python IDE or running it from the command line with `python your_code_file.py`.
-
 ## Usage
 
 To use this program, run the `KendraGenVIbot.py` script in a Python environment that has the required packages and credentials set up. The program will prompt you for input and respond with conversational AI messages. You can exit the program by typing "quit" in the prompt.
