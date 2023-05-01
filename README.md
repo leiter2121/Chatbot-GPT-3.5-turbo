@@ -1,6 +1,6 @@
 
 
-# Kendra is a chatbot powered by GPT-3.5-Turbo, Microsoft Bing Search, Amazon Polly, and OpenAI DallE.
+# Kendra is a chatbot powered by GPT-3.5-Turbo, Microsoft Bing Search, Amazon Polly, and OpenAI DALL·E .
 
 This is a Python program that demonstrates how to use the OpenAI API to generate conversational AI responses, search the web using Bing Search API, and generate images using DALL·E. The program also uses Amazon Polly to generate spoken text from the conversational responses.
 
