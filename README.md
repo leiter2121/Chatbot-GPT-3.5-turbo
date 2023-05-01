@@ -101,6 +101,43 @@ params = {
 
 If you type "generate image", the program will ask you to describe the image you want to see. You can then describe the image in natural language and the program will use DALL·E to generate an image based on your description. The program will save the generated image to your desktop.
 
+
+## How to change the voice in Amazon Polly
+
+This guide explains how to change the voice used by the `speak_text` function in the Python code that uses Amazon Polly. By default, the voice used is "Joey". Follow the steps below to change the voice to a different one.
+
+1. Determine the name of the voice you want to use. You can find a list of all the available voices at [this page](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html). Note down the name of the voice you want to use.
+
+2. In your code, find the `speak_text` function, which should look like this:
+
+   ```
+   def speak_text(text):
+        response = polly.synthesize_speech(
+            Text=text,
+            OutputFormat="mp3",
+            VoiceId="Joey",
+            Engine="neural"
+        )
+   ```
+
+   The `VoiceId` parameter specifies the voice to use. By default, it is set to "Joey". To change the voice, update the `VoiceId` parameter with the name of the voice you want to use.
+
+   For example, to use the "Emma" voice, the `speak_text` function should look like this:
+
+   ```
+   def speak_text(text):
+        response = polly.synthesize_speech(
+            Text=text,
+            OutputFormat="mp3",
+            VoiceId="Emma",
+            Engine="neural"
+        )
+   ```
+
+3. Save your changes and run your code. The `speak_text` function will now use the new voice you specified.
+
+   Note that not all voices are available in all regions. If you get an error when trying to use a voice, you may need to switch to a different region that supports that voice. You can find a list of the available regions for Amazon Polly at [this page](https://docs.aws.amazon.com/general/latest/gr/rande.html#polly_region).
+
 ## Use Cases
 
 This script can be used as a starting point for building a conversational AI chatbot or an interactive agent that responds to user input in a natural language. Some possible use cases for the script could be:
