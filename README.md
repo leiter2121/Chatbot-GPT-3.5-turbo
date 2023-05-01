@@ -38,10 +38,6 @@ If you type "search" followed by a query, the program will use the Bing Search A
 
 If you type "generate image", the program will ask you to describe the image you want to see. You can then describe the image in natural language and the program will use DALL·E to generate an image based on your description. The program will save the generated image to your desktop.
 
-## License
-
-This code is licensed under the MIT License. See the `LICENSE` file for details.
-
 ## Acknowledgments
 
-This program was created by adapting the OpenAI GPT-3 chat demo code and integrating it with the Bing Search API, DALL·E, and Amazon Polly.
+This program was created by adapting the OpenAI GPT-3 and integrating it with the Bing Search API, DALL·E, and Amazon Polly.
