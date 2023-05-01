@@ -121,4 +121,4 @@ This script can be used as a starting point for building a conversational AI cha
 
 ## Acknowledgments
 
-This program was created by adapting the OpenAI GPT-3 and integrating it with the Bing Search API, DALL·E, and Amazon Polly.
+This program was created by adapting the OpenAI GPT-3.5 Turbo LLM and integrating it with the Bing Search API, DALL·E, and Amazon Polly.
