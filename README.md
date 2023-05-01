@@ -82,6 +82,21 @@ max_tokens=1000
 
 If you type "search" followed by a query, the program will use the Bing Search API to search the web for the query and return the top five search results.
 
+To adjust the number of searches in the `search_bing` function, you can modify the value of the `count` parameter in the `params` dictionary. The `count` parameter specifies the number of search results to retrieve from the Bing search API. By default, the value is set to 5, but you can change it to any positive integer value to retrieve more or fewer search results.
+
+Here's an example of how to modify the `count` parameter to retrieve 10 search results:
+
+```
+params = {
+    'q': query,
+    'count': 10,  # Retrieve 10 search results
+    'offset': 0,
+    'mkt': 'en-US'
+}
+```
+
+(Note that the maximum value of `count` is 50, as per the Bing search API documentation.)
+
 ### Image Generation
 
 If you type "generate image", the program will ask you to describe the image you want to see. You can then describe the image in natural language and the program will use DALL·E to generate an image based on your description. The program will save the generated image to your desktop.
