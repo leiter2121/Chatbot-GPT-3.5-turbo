@@ -104,7 +104,7 @@ If you type "generate image", the program will ask you to describe the image you
 
 ## How to change the voice in Amazon Polly
 
-This guide explains how to change the voice used by the `speak_text` function in the Python code that uses Amazon Polly. By default, the voice used is "Joey". Follow the steps below to change the voice to a different one.
+To change the voice used by the `speak_text` function in the Python code that uses Amazon Polly. By default, the voice used is "Joey". Follow the steps below to change the voice to a different one.
 
 1. Determine the name of the voice you want to use. You can find a list of all the available voices at [this page](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html). Note down the name of the voice you want to use.
 
