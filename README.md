@@ -26,7 +26,7 @@ You can install these packages using `pip`:
 pip install openai boto3 pygame requests
 ```
 
-#Setting up APIs, and Reigions
+##Setting up APIs, and Reigions
 
 This code uses OpenAI's API, Bing Search API, and Amazon Polly. Before running this code, you will need to set up API keys for OpenAI and Bing Search, and set up credentials for Amazon Polly. Here's how:
 
