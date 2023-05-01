@@ -54,6 +54,30 @@ To use this program, run the `KendraGenVIbot.py` script in a Python environment 
 
 ## (THE BOT WILL NOT SAVE THE CONVERSATION HISTORY UNLESS YOU QUIT THE BOT PROPERLY.)
 
+## Adjusting the Settings in generate_chat_response function:
+
+The `generate_chat_response` function is responsible for generating the chat response. This function takes in the `conversation` parameter, which contains a list of messages between the user and the bot. Here's how you can adjust the settings in this part of the code:
+
+1. Truncate or Omit Conversation History: You can adjust the conversation history by changing the number of messages that the function will keep in memory. By default, it keeps the last 15 messages. If you want to increase or decrease this number, you can change the value in the following line of code:
+
+```
+conversation = conversation[-15:]
+```
+
+2. Limit Conversation Tokens: The `conversation_tokens` variable is used to count the number of tokens in the conversation. If this number exceeds 4096 tokens, the function will only keep the last message. If you want to adjust this value, you can change the number 4096 in the following line of code:
+
+```
+if conversation_tokens > 4096:
+    conversation = conversation[-1:]
+```
+
+3. Max Tokens: The `max_tokens` parameter limits the total number of tokens in the generated response. By default, this value is set to 1000 tokens. If you want to adjust this value, you can change the number in the following line of code:
+
+```
+max_tokens=1000
+```
+
+
 ### Search
 
 If you type "search" followed by a query, the program will use the Bing Search API to search the web for the query and return the top five search results.
