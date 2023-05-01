@@ -7,7 +7,7 @@ This is a Python program that demonstrates how to use the OpenAI API to generate
 ## Prerequisites
 
 To run this program, you need to have the following:
-
+- Python 3.8 (minimum) https://www.python.org/downloads/release/python-380/
 - An OpenAI API key
 - A Bing Search API key
 - An endpoint for the Bing Search API
