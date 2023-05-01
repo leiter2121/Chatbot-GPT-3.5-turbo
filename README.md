@@ -50,7 +50,7 @@ pip install openai boto3 pygame requests
 
 ## Usage
 
-To use this program, run the `KendraGenVIbot.py` script in a Python environment that has the required packages and credentials set up. The program will prompt you for input and respond with conversational AI messages. You can exit the program by typing "quit" in the prompt.
+To use this program, run the `KendraGenVIbot.py` script in a Python environment that has the required packages and credentials set up. The program will prompt you for input and respond with conversational AI messages. You can exit the program by typing "quit" in the prompt. (THE BOT WILL NOT SAVE THE CONVERSATION HISTORY UNLESS YOU QUIT THE BOT PROPERLY.)
 
 ### Search
 
