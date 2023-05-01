@@ -95,7 +95,7 @@ params = {
 }
 ```
 
-(Note that the maximum value of `count` is 50, as per the Bing search API documentation.)
+**Note:** that the maximum value of `count` is 50, as per the Bing search API documentation.
 
 ### Image Generation
 
