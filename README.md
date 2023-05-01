@@ -138,7 +138,7 @@ To change the voice used by the `speak_text` function in the Python code that us
 
    **Note:** that not all voices are available in all regions. If you get an error when trying to use a voice, you may need to switch to a different region that supports that voice. You can find a list of the available regions for Amazon Polly at [this page](https://docs.aws.amazon.com/general/latest/gr/rande.html#polly_region).
    
-   **Note:** Not all Amazon Polly voices support the neural TTS engine. If you want to use the neural TTS engine, make sure to choose a voice that supports it. You can check the documentation to see which voices support the neural TTS engine. If you choose a voice that doesn't support the neural TTS engine, you can still use the standard TTS engine by removing the `Engine` parameter from the `synthesize_speech` function call or setting it to `"standard"`, or remove the `"engine"` line altogether.
+   **Note:** Not all Amazon Polly voices support the neural TTS engine. If you want to use the neural TTS engine, make sure to choose a voice that supports it. You can check the documentation to see which voices support the neural TTS engine. If you choose a voice that doesn't support the neural TTS engine, you can still use the standard TTS engine by removing the `Engine` parameter from the `synthesize_speech` function call or setting it to `"standard"`, or remove the `"Engine"` line from the code altogether.
 
 ## Use Cases
 
